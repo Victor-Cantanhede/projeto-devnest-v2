@@ -155,7 +155,6 @@ section.introduction {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.39);
     backdrop-filter: blur(10px);
-    border-radius: 10px;
 }
 
 .introduction article {
