@@ -15,8 +15,10 @@
 
             <!--LOGO-->
             <div class="container-logo">
-                <h3>&lt;DEV&gt;</h3>
-                <h2>&lt;/NEST&gt;</h2>
+                <a href="/">
+                    <h3>&lt;DEV&gt;</h3>
+                    <h2>&lt;/NEST&gt;</h2>
+                </a>
             </div>
 
             <!--MENUS-->
@@ -39,7 +41,7 @@
                         help
                         </span>Sobre</a></li>
                     <!---->
-                    <li class="menu" id="sign-in"><a href="/"><span class="material-symbols-outlined">
+                    <li class="menu" id="btnDestaque"><a href="/"><span class="material-symbols-outlined">
                         login
                         </span>Cadastre-se</a></li>
                     <!---->
@@ -53,28 +55,38 @@
         <section class="introduction">
             <article>
                 <h1>Serviços de Tecnologia</h1>
+
                 <h2>O melhor lugar para transformar seu projeto em realidade!</h2>
+                <br>
                 <p>O projeto Dev Nest oferece prestação de serviços na área da tecnologia para diversos tipos de ambiente.</p>
+
                 <p>Para saber mais sobre nossos serviços, acesse o menu <strong>"serviços"</strong>.</p>
             </article>
 
             <!--CARDS-->
             <div class="container-cards">
                 <div class="card">
-                    card
+                    <span class="material-symbols-outlined">
+                        language
+                    </span>
+                    <p>Desenvolvimento de sites</p>
                 </div>
                 <div class="card">
-                    card
+                    <span class="material-symbols-outlined">
+                        draw
+                    </span>
+                    <p>Estilização de elementos Web</p>
                 </div>
                 <div class="card">
-                    card
+                    <span class="material-symbols-outlined">
+                        terminal
+                    </span>
+                    <p>Manutenção de sistemas</p>
                 </div>
             </div>
 
             <!--LINK SAIBA MAIS-->
-            <div>
-                <a href="/">Saiba mais</a>
-            </div>
+            <a href="/" id="btnSaibaMais">Saiba mais</a>
         </section>
     </main>
 
@@ -82,5 +94,22 @@
     <footer>
         <p>Todos os direitos autorais reservados ao projeto Dev Nest &copy; 2024</p>
     </footer>
+
+    <!--SCRIPTS-->
+    <script>
+
+        // SCRIPT PARA AJUSTE DE MARGIN QUANDO O HEADER É FIXO
+        function fixMarginTop() {
+            const header = document.querySelector('header');
+            const main = document.querySelector('main');
+            const headerHeight = header.offsetHeight;
+
+            main.style.marginTop = headerHeight + 'px';
+        }
+
+        window.addEventListener('load', fixMarginTop);
+        window.addEventListener('resize', fixMarginTop);
+        //////////////////////////////////////////////////////
+    </script>
 </body>
 </html>
