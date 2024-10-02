@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*border: 1px solid rgb(2, 255, 78);*/
+}
+
+:root {
+    --colorwhite__: #ffffff;
+    --maincolor001: #0A0A0A;
+    --maincolor002: #161616;
+    --maincolor003: #1D1C1C;
+    --maincolor004: #232323;
+    --maincolor005: #2C2C2C;
+    --maincolor006: #363636;
+    --maincolor007: #454444;
+    --maincolor008: #00072D;
+    --maincolor009: #051650;
+    --maincolor010: #0A2472;
+    --maincolor011: #123499;
+    --maincolor012: #1A43BF;
+}
+
+body {
+    height: 100dvh;
+    width: 100%;
+    display: block;
+}
+
+header {
+    height: 15dvh;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--maincolor001);
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin-top: 15dvh;
+}
+
+.container-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-logo {
+    text-shadow: 0 0 10px black;
+}
+
+.container-logo h3 {
+    color: white;
+}
+
+.container-logo h2 {
+    color: var(--maincolor012);
+}
+
+nav.container-menus ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 2px white;
+    transition: 0.3s;
+    animation: ease-in-out;
+}
+
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu#sign-in {
+    height: 50px;
+    width: 200px;
+    text-shadow: 0 0 10px black;
+    background-image: linear-gradient(to right, var(--maincolor010), var(--maincolor012));
+    transition: 0.3s;
+    animation: ease-in-out;
+}
+
+.menu#sign-in:hover {
+    text-shadow: 0 0 10px white;
+    background-image: linear-gradient(to right, var(--maincolor002), var(--maincolor001));
+    border: 2px solid var(--maincolor012);
+    transition: 0.3s;
+    animation: ease-in-out;
+}
+
+.menu:hover {
+    text-shadow: 0 0 10px black;
+    background-color: var(--maincolor002);
+    border-bottom: 2px solid var(--maincolor012);
+    transition: 0.3s;
+    animation: ease-in-out;
+}
+
+footer {
+    position: relative;
+    top: 100%;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
