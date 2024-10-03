@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Nest</title>
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/pop-ups.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -15,7 +16,7 @@
 
             <!--LOGO-->
             <div class="container-logo">
-                <a href="/">
+                <a href="index.html">
                     <h3>&lt;DEV&gt;</h3>
                     <h2>&lt;/NEST&gt;</h2>
                 </a>
@@ -25,15 +26,15 @@
             <nav class="container-menus">
                 <ul>
                     <!---->
-                    <li class="menu"><a href="#"><span class="material-symbols-outlined">
+                    <li class="menu"><a href="index.html"><span class="material-symbols-outlined">
                         home
                         </span>Home</a></li>
                     <!---->
-                    <li class="menu"><a href="#"><span class="material-symbols-outlined">
+                    <li class="menu" onclick="popUp('.back-popup')"><a href="#"><span class="material-symbols-outlined">
                         folder_open
                         </span>Portifólio</a></li>
                     <!---->
-                    <li class="menu"><a href="#"><span class="material-symbols-outlined">
+                    <li class="menu" onclick="popUp('.back-popup')"><a href="#"><span class="material-symbols-outlined">
                         payments
                         </span>Serviços</a></li>
                     <!---->
@@ -41,7 +42,7 @@
                         help
                         </span>Sobre</a></li>
                     <!---->
-                    <li class="menu" id="btnDestaque"><a href="#"><span class="material-symbols-outlined">
+                    <li class="menu" id="btnDestaque" onclick="popUp('.back-popup')"><a href="#"><span class="material-symbols-outlined">
                         login
                         </span>Cadastre-se</a></li>
                     <!---->
@@ -95,21 +96,17 @@
         <p>Todos os direitos autorais reservados ao projeto Dev Nest &copy; 2024</p>
     </footer>
 
+    <!--POP-UPS-->
+    <div class="back-popup" onclick="closePopUp('.back-popup')">
+        <div class="conainter-popup">
+            <button class="pop-up-btn" onclick="closePopUp('.back-popup')">X</button>
+            <h1>Sistema indisponível</h1>
+            <p>Pedimos desculpas pelo ocorrido, nossa equipe de T.I já está trabalhando para solucionar a instabilidade.</p>
+        </div>
+    </div>
+
     <!--SCRIPTS-->
-    <script>
-
-        // SCRIPT PARA AJUSTE DE MARGIN QUANDO O HEADER É FIXO
-        function fixMarginTop() {
-            const header = document.querySelector('header');
-            const main = document.querySelector('main');
-            const headerHeight = header.offsetHeight;
-
-            main.style.marginTop = headerHeight + 'px';
-        }
-
-        window.addEventListener('load', fixMarginTop);
-        window.addEventListener('resize', fixMarginTop);
-        //////////////////////////////////////////////////////
-    </script>
+    <script src="scripts/layout.js"></script>
+    <script src="scripts/pop-up.js"></script>
 </body>
 </html>
