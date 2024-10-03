@@ -97,8 +97,10 @@
     </footer>
 
     <!--POP-UPS-->
+
+    <!--SISTEMA INDISPONÍVEL-->
     <div class="back-popup" onclick="closePopUp('.back-popup')">
-        <div class="conainter-popup">
+        <div class="conainter-popup" onclick="event.stopPropagation()">
             <button class="pop-up-btn" onclick="closePopUp('.back-popup')">X</button>
             <h1>Sistema indisponível</h1>
             <p>Pedimos desculpas pelo ocorrido, nossa equipe de T.I já está trabalhando para solucionar a instabilidade.</p>
