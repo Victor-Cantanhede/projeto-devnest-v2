@@ -23,6 +23,7 @@
     --maincolor010: #0A2472;
     --maincolor011: #123499;
     --maincolor012: #1A43BF;
+    --textstrong01: #2cb2ff;
 }
 
 html {
@@ -175,7 +176,7 @@ section.introduction {
 
 .introduction article h1 {
     font-size: 3em;
-    color: rgb(44, 178, 255);
+    color: var(--textstrong01);
 }
 
 .introduction article h2 {
@@ -247,6 +248,85 @@ section.introduction {
     box-shadow: 0 0 10px var(--maincolor011);
     transition: 0.3s;
     animation: ease-in-out;
+}
+
+/*CONTEÚDOS PT.2*/
+
+section.sobre {
+    background-color: var(--maincolor001);
+    color: white;
+    height: max-content;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-sobre {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.article-sobre {
+    width: 100%;
+    max-width: 535px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.article-sobre h1 {
+    width: max-content;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    
+    color:white;
+    background-color: var(--maincolor012);
+    box-shadow: 0 0 20px blue;
+    text-shadow: 0 0 10px black;
+}
+
+.article-sobre p {
+    text-align: justify;
+    line-height: 1.5em;
+    text-shadow: 0 0 10px black;
+}
+
+.article-sobre p strong {
+    color: var(--textstrong01);
+}
+
+.generic002 {
+    border: 1px solid blue;
+    box-shadow: 0 0 20px blue;
+}
+
+.generic003 {
+    width: 100%;
+    max-width: 535px;
+    display: flex;
+    justify-content: center;
+}
+
+.aside-sobre {
+    height: 400px;
+    width: 400px;
+
+    background-image: url(../img/img001.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    box-shadow: 3px 3px 10px black;
 }
 
 /********************************************************/
