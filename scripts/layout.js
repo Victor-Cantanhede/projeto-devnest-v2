@@ -7,6 +7,10 @@ function fixMarginTop() {
     const headerHeight = header.offsetHeight;
 
     main.style.marginTop = headerHeight + 'px';
+
+    // AJUSTANDO CONFORME NECESSIDADE
+    const sectionSobre = document.getElementById('isobre');
+    sectionSobre.style.paddingTop = headerHeight + 'px';
 }
 
 window.addEventListener('load', fixMarginTop);
